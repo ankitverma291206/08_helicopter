@@ -1,0 +1,19 @@
+LAB 4 - HELICOPTER FINAL PACKAGE
+
+Included:
+1. helicopter/ - updated project source code
+2. LLM_Chat_History.pdf - implementation-session chat record
+3. SUBMISSION_GUIDE.txt - this guide
+
+BEFORE SUBMITTING:
+Add two genuine 10-second gameplay recordings:
+- before_changes.mp4 : starter game showing the broken behavior
+- after_changes.mp4  : completed game showing the fixed behavior/features
+
+The lab README requires those two videos and the complete Chat/LLM history.
+Do not fabricate or substitute generated footage for the required recordings.
+
+Completed controls:
+- Up / Down: move
+- S or Space: activate one-hit shield
+- R: restart after game over

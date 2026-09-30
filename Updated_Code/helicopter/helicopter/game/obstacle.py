@@ -1,10 +1,5 @@
-"""
-Obstacle: a scrolling wall pair with a gap the helicopter must fly
-through.
-"""
-
+"""Scrolling obstacle made from a top and bottom wall with a gap."""
 import pygame
-
 
 class Obstacle:
     def __init__(self, x, gap_y, gap_height, wall_width, screen_height, speed):
@@ -14,7 +9,6 @@ class Obstacle:
         self.wall_width = wall_width
         self.screen_height = screen_height
         self.speed = speed
-        self.scored = False   # used for distance/pass tracking later
 
     def update(self):
         self.x -= self.speed
@@ -28,4 +22,8 @@ class Obstacle:
 
     def get_bottom_rect(self):
         bottom_y = self.gap_y + self.gap_height / 2
-        return pygame.Rect(int(self.x), int(bottom_y), self.wall_width, int(self.screen_height - bottom_y))
+        return pygame.Rect(int(self.x), int(bottom_y), self.wall_width,
+                          int(self.screen_height - bottom_y))
+
+    def collides_with(self, rect):
+        return rect.colliderect(self.get_top_rect()) or rect.colliderect(self.get_bottom_rect())
